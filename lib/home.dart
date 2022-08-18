@@ -1,4 +1,5 @@
 import 'package:facebook/widgets/AppBarButtons.dart';
+import 'package:facebook/widgets/sections/status.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -33,6 +34,9 @@ class Home extends StatelessWidget {
             )
           ],
         ),
+        body: ListView(children: const [
+          StatusSection(),
+        ]),
       ),
       debugShowCheckedModeBanner: false,
     );
