@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
 class HeaderButtons extends StatelessWidget {
+  Widget verticalDivider() {
+    return const VerticalDivider(
+      thickness: 2,
+      color: Color.fromARGB(223, 219, 226, 230),
+    );
+  }
+
   Widget headerButton({
     required String buttonText,
     required IconData buttonIcon,
@@ -31,10 +38,7 @@ class HeaderButtons extends StatelessWidget {
                 print("Live button is clicked");
               },
               buttoncolor: Colors.red),
-          const VerticalDivider(
-            thickness: 1,
-            color: Color.fromARGB(223, 219, 226, 230),
-          ),
+          verticalDivider(),
           headerButton(
               buttonText: "Photo",
               buttonIcon: Icons.photo_library,
@@ -42,10 +46,7 @@ class HeaderButtons extends StatelessWidget {
                 print("Live button is clicked");
               },
               buttoncolor: Colors.green),
-          const VerticalDivider(
-            thickness: 1,
-            color: Color.fromARGB(223, 219, 226, 230),
-          ),
+          verticalDivider(),
           headerButton(
               buttonText: "Room",
               buttonIcon: Icons.video_call,
